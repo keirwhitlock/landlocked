@@ -7,7 +7,8 @@ import (
 
 type User struct {
 	Name string
-	Bio  template.HTML
+	Bio  []int
+	Mapp map[string]int
 }
 
 func main() {
@@ -18,7 +19,8 @@ func main() {
 
 	user := User{
 		Name: "John Smith",
-		Bio:  `<script>alert("haha")</script>`,
+		Bio:  []int{1, 2, 3, 4},
+		Mapp: map[string]int{"one": 1, "two": 2, "three": 3},
 	}
 
 	err = t.Execute(os.Stdout, user)

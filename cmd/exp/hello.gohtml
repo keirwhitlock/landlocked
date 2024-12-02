@@ -1,2 +1,3 @@
 <h1>Hello, {{.Name}}</h1>
-Bio: {{.Bio}}
+Bio: {{range .Bio}} <p>{{.}}</p> {{end}}
+Mapp: {{range .Mapp}} <p>{{.}}</p> {{end}}
